@@ -10,7 +10,7 @@ export default function SearchStack() {
       <Stack.Screen
         name="searchs"
         component={Search}
-        options={{ title: "searchhh" }}
+        options={{ title: "searchhh", headerShown: false  }}
       />
     </Stack.Navigator>
   );

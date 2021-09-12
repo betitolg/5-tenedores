@@ -10,7 +10,7 @@ export default function TopRestaurantsStack () {
     <Stack.Screen
       name="top-restaurantss"
       component={TopRestaurants}
-      options={{ title: "Los mejores restaurantes" }}
+      options={{ title: "Los mejores restaurantes" , headerShown: false }}
     />
   </Stack.Navigator>);
 };

@@ -11,7 +11,7 @@ return(
 
 <Stack.Navigator>
 
-    <Stack.Screen name="favorits" component={Favorites} options={{title:"Favoritos"}}/>
+    <Stack.Screen name="favorits" component={Favorites} options={{title:"Favoritos", headerShown: false }}/>
 </Stack.Navigator>
 
 );

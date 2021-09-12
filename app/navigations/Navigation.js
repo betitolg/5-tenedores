@@ -18,6 +18,7 @@ const Navigation = () => {
           tabBarIcon: ({ color }) => screenOptions(route, color),
           tabBarActiveTintColor: "tomato",
           tabBarInactiveTintColor: "gray",
+          headerShown: false,
         })}
       >
         <Tab.Screen
@@ -25,7 +26,7 @@ const Navigation = () => {
           component={RestaurantsStack}
           options={{ title: "Restaurantes" }}
         />
-      
+
         <Tab.Screen
           name="top-restaurants"
           component={TopRestaurantsStack}
@@ -42,10 +43,10 @@ const Navigation = () => {
           component={SearchStack}
           options={{ title: "Buscar" }}
         />
-          <Tab.Screen
+        <Tab.Screen
           name="account"
           component={AccountStack}
-          options={{ title: "Cuenta" ,tabBarBadge:3 }}
+          options={{ title: "Cuenta", tabBarBadge: 3 }}
         />
       </Tab.Navigator>
     </NavigationContainer>
