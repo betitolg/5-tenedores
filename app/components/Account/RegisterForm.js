@@ -6,7 +6,7 @@ import { StyleSheet, View } from "react-native";
 import { isEmpty, size } from "lodash";
 
 import Loading from "../Loading";
-import { useNavigation } from "@react-navigation/core";
+import { useNavigation } from "@react-navigation/native";
 import { validateEmail } from "../../utils/validations";
 
 const RegisterForm = (props) => {

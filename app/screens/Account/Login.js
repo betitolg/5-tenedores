@@ -4,7 +4,7 @@ import React,{useRef} from "react";
 import { Divider } from "react-native-elements";
 import LoginForm from "../../components/Account/LoginForm";
 import Toast from "react-native-easy-toast";
-import { useNavigation } from "@react-navigation/core";
+import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
 
