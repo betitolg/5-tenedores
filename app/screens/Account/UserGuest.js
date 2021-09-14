@@ -10,7 +10,7 @@ const UserGuest = () => {
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
       <Image
-        source={require("../../../assets/img/user-guest.jpg")}
+        source={require("../../../assets/img/museum.jpg")}
         resizeMode="contain"
         style={styles.image}
       />
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnStyle: {
-    backgroundColor: "#00a680",
+    backgroundColor: "#FF745C",
   },
   btnContainer: {
     width: "70%",

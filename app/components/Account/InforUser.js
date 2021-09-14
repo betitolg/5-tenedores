@@ -12,15 +12,13 @@ import firebase from "firebase";
 const InforUser = (props) => {
   const {
     userInfo: { photoURL, displayName, email, uid },
-    toastRef, setLoading, setLoadingText
+    toastRef,
+    setLoading,
+    setLoadingText,
   } = props;
 
-
-  
   const changeAvatar = async () => {
     const resultPermission = await Permissions.requestPermissionsAsync();
-
-    
 
     const resultPermissionCamera = resultPermission.status;
 
@@ -45,7 +43,7 @@ const InforUser = (props) => {
   };
 
   const uploadImage = async (uri) => {
-setLoadingText("Actualizando Avatar");
+    setLoadingText("Actualizando Avatar");
     setLoading(true);
     const response = await fetch(uri);
 
@@ -67,7 +65,10 @@ setLoadingText("Actualizando Avatar");
 
         await firebase.auth().currentUser.updateProfile(update);
         setLoading(false);
-      }).catch(()=>{toastRef.current.show("Error al actualizar el avatar")});
+      })
+      .catch(() => {
+        toastRef.current.show("Error al actualizar el avatar");
+      });
   };
 
   return (

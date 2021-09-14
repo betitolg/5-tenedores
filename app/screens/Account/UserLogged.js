@@ -14,6 +14,7 @@ const UserLogged = () => {
   const [loadingText, setLoadingText] = useState("");
   const toastRef = useRef();
   const [userInfo, setUserInfo] = useState(null);
+  const [reloadUserInfo, setReloadUserInfo] = useState(false)
 
   useEffect(() => {
     (async () => {
@@ -21,7 +22,8 @@ const UserLogged = () => {
 
       setUserInfo(user);
     })();
-  }, []);
+    setReloadUserInfo(false);
+  }, [reloadUserInfo]);
   return (
     <View style={styles.viewUserInfo}>
       {userInfo && (
@@ -33,7 +35,7 @@ const UserLogged = () => {
         />
       )}
 
-    <AccountOptions userInfo={userInfo} toastRef={toastRef}/>
+    <AccountOptions userInfo={userInfo} toastRef={toastRef} setReloadUserInfo={setReloadUserInfo}/>
       <Button
         title="Cerrar sesión"
         onPress={() => firebase.auth().signOut()}
